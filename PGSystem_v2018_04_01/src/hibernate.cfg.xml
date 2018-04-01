@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <mapping class="entity.BaseModule"/>
+    <mapping class="entity.ManufactureUsers"/>
+    <mapping class="entity.BaseContainer"/>
+    <mapping class="entity.BaseHarness"/>
+    <mapping class="entity.BaseHarnessAdditionalBarecode"/>
+    <mapping class="entity.ConfigProject"/>
+    <mapping class="entity.ConfigUcs"/>
+    <mapping class="entity.ConfigShift"/>
+    <mapping class="entity.ConfigBarcode"/>
+    <mapping class="entity.ConfigSegment"/>
+    <mapping class="entity.ConfigWorkplace"/>
+    <mapping class="entity.ConfigWarehouse"/>
+    <mapping class="entity.ConfigBookingType"/>
+    <mapping class="entity.PackagingConfig"/>
+    <mapping class="entity.PackagingMaster"/>
+    <mapping class="entity.PackagingItems"/>
+    <mapping class="entity.PackagingStockMovement"/>
+    <mapping class="entity.ScheduleEntry"/>
+    <mapping class="entity.HisBaseContainer"/>
+    <mapping class="entity.HisBaseHarness"/>
+    <mapping class="entity.HisGaliaPrint"/>
+    <mapping class="entity.HisPalletPrint"/>
+    <mapping class="entity.HisLogin"/>
+    <mapping class="entity.DropBaseHarnessAdditionalBarecode"/>
+    <mapping class="entity.DropBaseContainer"/>
+    <mapping class="entity.DropBaseHarness"/>
+    <mapping class="entity.LoadPlanDestinationRel"/>
+    <mapping class="entity.LoadPlanDestination"/>
+    <mapping class="entity.LoadPlan"/>
+    <mapping class="entity.LoadPlanLine"/>
+    <mapping class="entity.LoadPlanLinePackaging"/>
+    <!-- -->
+  </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,1 @@
+psql --set ON_ERROR_STOP=on -U [USERNAME] [DB_NAME] < "[LOCATION TO DUMP FILE]"

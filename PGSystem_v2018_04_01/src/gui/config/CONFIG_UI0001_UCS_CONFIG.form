@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="title" type="java.lang.String" value="Configuration packaging par r&#xe9;f&#xe9;rence"/>
+    <Property name="name" type="java.lang.String" value="Configuration packaging par r&#xe9;f&#xe9;rence" noResource="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Configuration packaging par r&#xe9;f&#xe9;rence">
+              <Font PropertyName="font" name="Calibri" size="14" style="1"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Configuration packaging par r&#xe9;f&#xe9;rence"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Curseur par d&#xe9;faut"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="Configuration packaging par r&#xe9;f&#xe9;rence" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="user_list_panel" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="msg_lbl" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="fname_lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="login_lbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="fname_lbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="login_lbl4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="cpn_txtbox" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="order_no_txt" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="segment_filter" alignment="0" pref="173" max="32767" attributes="0"/>
+                                      <Component id="id_lbl" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="lname_lbl" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace pref="63" max="32767" attributes="0"/>
+                                                  <Component id="lpn_txtbox" min="-2" pref="145" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="login_lbl2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="pwd_lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="workplace_filter" pref="146" max="32767" attributes="0"/>
+                                                      <Component id="barcodes_nbre_txtbox" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="lname_lbl1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                          <Component id="create_time_txt" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="save_btn" min="-2" pref="88" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="duplicate_btn" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="cancel_btn" min="-2" pref="102" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="delete_btn" min="-2" pref="102" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="special_order_check" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane1" min="-2" pref="362" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="pwd_lbl1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="pwd_lbl7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="login_lbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lname_lbl2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="write_time_txt" alignment="1" min="-2" pref="199" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="assy_txtbox" min="-2" pref="124" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="pwd_lbl6" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="index_txtbox" min="-2" pref="133" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="pwd_lbl3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="harnessType_filter" min="-2" pref="133" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="pwd_lbl2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="pack_type_filter" min="-2" pref="103" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="stdTime_txtbox" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                          <Component id="pwd_lbl8" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                          <Component id="pwd_lbl4" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="pack_size_txtbox" min="-2" pref="43" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="pwd_lbl5" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                          <Component id="lifes_txtbox" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="price_txtbox" min="-2" pref="98" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="active_combobox" min="-2" pref="97" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Component id="msg_lbl" min="-2" pref="23" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="fname_lbl1" min="-2" max="-2" attributes="0"/>
+                              <Component id="id_lbl" min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="fname_lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cpn_txtbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lname_lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="create_time_txt" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="lname_lbl2" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="write_time_txt" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="lname_lbl1" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                  <Component id="lpn_txtbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pwd_lbl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                  <Component id="index_txtbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pwd_lbl3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pack_type_filter" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pwd_lbl4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pack_size_txtbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pwd_lbl5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lifes_txtbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="pwd_lbl2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="active_combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="login_lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="pwd_lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="pwd_lbl7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="segment_filter" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="workplace_filter" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="harnessType_filter" alignment="3" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="login_lbl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="assy_txtbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="barcodes_nbre_txtbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="login_lbl2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="order_no_txt" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="login_lbl4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pwd_lbl6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stdTime_txtbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pwd_lbl8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="price_txtbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="73" max="-2" attributes="0"/>
+                      <Component id="special_order_check" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="cancel_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="delete_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="duplicate_btn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="save_btn" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                  <Component id="user_list_panel" min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="fname_lbl">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CPN *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cpn_txtbox">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="cpn_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lname_lbl">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="LPN *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="lpn_txtbox">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="login_lbl">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Segment *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="pwd_lbl">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Workplace *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="pwd_lbl1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Index *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="save_btn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Save"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save_btnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="cancel_btn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Clear"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancel_btnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="active_combobox">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="2">
+                <StringItem index="0" value="1"/>
+                <StringItem index="1" value="0"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="active_comboboxActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="pwd_lbl2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Active *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="delete_btn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Delete"/>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delete_btnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="id_lbl">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="99" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="1"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                <EtchetBorder/>
+              </Border>
+            </Property>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="index_txtbox">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="pwd_lbl3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pack Type *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="pwd_lbl4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pack Size *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="pwd_lbl5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nbre Packs *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="assy_txtbox">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="login_lbl1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Assembly Workstation"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="pack_size_txtbox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="lifes_txtbox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="-1"/>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="login_lbl2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Barcodes Nbre *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="barcodes_nbre_txtbox">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="pwd_lbl6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Std Time *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="stdTime_txtbox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stdTime_txtboxActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="duplicate_btn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dupliquer"/>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="duplicate_btnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="pwd_lbl7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Harness Type *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="msg_lbl">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="12" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="0" red="0" type="rgb"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="fname_lbl1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ID"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="comment_txt">
+              <Properties>
+                <Property name="columns" type="int" value="10"/>
+                <Property name="rows" type="int" value="3"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JComboBox" name="segment_filter">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="segment_filterItemStateChanged"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="segment_filterActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="workplace_filter">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="workplace_filterItemStateChanged"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="workplace_filterActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="harnessType_filter">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="pack_type_filter">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="order_no_txt">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="login_lbl4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Order No *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="special_order_check">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Special Order"/>
+          </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="special_order_checkStateChanged"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="pwd_lbl8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Price *"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="price_txtbox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JPanel" name="user_list_panel">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="UCS list">
+                  <Font PropertyName="font" name="Calibri" size="14" style="1"/>
+                </TitledBorder>
+              </Border>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="fname_lbl_search" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="cpn_txtbox_search" min="-2" pref="120" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lname_lbl_search" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="pack_type_txtbox_search" min="-2" pref="121" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="llogin_lbl_search" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="segment_txtbox_search" min="-2" pref="77" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="llogin_lbl_search1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="supplier_pn_txtbox_search" min="-2" pref="109" max="-2" attributes="0"/>
+                              <EmptySpace pref="297" max="32767" attributes="0"/>
+                              <Component id="filter_btn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="clear_search_btn" min="-2" pref="114" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="user_table_scroll" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="filter_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="clear_search_btn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="llogin_lbl_search1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="supplier_pn_txtbox_search" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cpn_txtbox_search" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fname_lbl_search" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lname_lbl_search" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pack_type_txtbox_search" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="llogin_lbl_search" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="segment_txtbox_search" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="user_table_scroll" pref="489" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="user_table_scroll">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="ucs_table">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="4" rowCount="4">
+                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                      </Table>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JTextField" name="cpn_txtbox_search">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cpn_txtbox_searchKeyPressed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cpn_txtbox_searchKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="fname_lbl_search">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CPN"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lname_lbl_search">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pack Type"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="pack_type_txtbox_search">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="pack_type_txtbox_searchKeyPressed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="pack_type_txtbox_searchKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="llogin_lbl_search">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Segment"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="segment_txtbox_search">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="segment_txtbox_searchKeyPressed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="segment_txtbox_searchKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="filter_btn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Filter"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="filter_btnActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="clear_search_btn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Clear filters"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clear_search_btnActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="supplier_pn_txtbox_search">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="supplier_pn_txtbox_searchKeyPressed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="supplier_pn_txtbox_searchKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="llogin_lbl_search1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="LEONI PN"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="lname_lbl1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Creation Date"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="create_time_txt">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lname_lbl2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Write Date"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="write_time_txt">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="name" type="java.lang.String" value="fname_txtbox" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

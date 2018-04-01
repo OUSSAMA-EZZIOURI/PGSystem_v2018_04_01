@@ -1,0 +1,10 @@
+avr. 01, 2018 1:35:56 PM ui.UILog log
+INFOS: File 2018_04_01.log is created!
+
+avr. 01, 2018 1:35:56 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_01] created !
+Print sub directory [.\print\2018_04_01.\open_sheet] created !
+Print sub directory [.\print\2018_04_01.\closing_sheet] created !
+Print sub directory [.\print\2018_04_01.\picking_label] created !
+Print sub directory [.\print\2018_04_01.\dispatch_label] created !
+

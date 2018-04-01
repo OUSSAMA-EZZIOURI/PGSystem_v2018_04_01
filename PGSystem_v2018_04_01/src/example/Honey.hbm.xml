@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="example">
+    <class name="Honey" table="thoney">
+        <id name="id">
+            <!--  PostgreSQL generator for a sequence which is named honey_id_seq
+            -->
+            <generator class="sequence">
+                <param name="sequence">honey_id_seq</param>
+            </generator>
+
+            <!--  MySQL generator for a increment field
+            <generator class="increment"/>
+            -->
+        </id>
+        <property name="name" column="fooname"/>
+        <property name="taste" column="bartaste"/>
+
+    </class>
+
+</hibernate-mapping>
