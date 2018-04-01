@@ -23,7 +23,7 @@ public class GlobalVars {
     /**
      *
      */
-    public static String APP_VERSION = "v18.02.26";
+    public static String APP_VERSION = "v18.04.01";
 
     /**
      *
