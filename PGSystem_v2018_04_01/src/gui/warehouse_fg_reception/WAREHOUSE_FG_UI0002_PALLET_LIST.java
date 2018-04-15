@@ -145,9 +145,9 @@ public final class WAREHOUSE_FG_UI0002_PALLET_LIST extends javax.swing.JFrame {
                 if (e.getClickCount() == 2) {
                     //System.out.println("PackagingVars.context.getUser().getAccessLevel()" + PackagingVars.context.getUser().getAccessLevel());
                     if (PackagingVars.context.getUser().getAccessLevel() == GlobalVars.PROFIL_ADMIN) {
-                        new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(searchResult_table.getValueAt(searchResult_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), true, true, true).setVisible(true);
+                        new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(searchResult_table.getValueAt(searchResult_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), "", 1, true, true, true).setVisible(true);
                     } else {
-                        new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(searchResult_table.getValueAt(searchResult_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), false, false, false).setVisible(true);
+                        new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(searchResult_table.getValueAt(searchResult_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), "", 1, false, false, false).setVisible(true);
                     }
                 }
             }
@@ -804,8 +804,7 @@ public final class WAREHOUSE_FG_UI0002_PALLET_LIST extends javax.swing.JFrame {
                         q += " AND container_state ='" + GlobalVars.PALLET_OPEN + "' AND bc.create_time < '%s' ORDER BY bc.create_time DESC";
                         q = String.format(q, endDateStr);
                     }
-                }
-                else if (UIHelper.listContains(selected, GlobalVars.PALLET_WAITING)) {
+                } else if (UIHelper.listContains(selected, GlobalVars.PALLET_WAITING)) {
                     if (startDatePicker.getDate() != null && endDatePicker.getDate() != null) {
                         q += " AND container_state ='" + GlobalVars.PALLET_WAITING + "' AND bc.write_time BETWEEN '%s' AND '%s' ORDER BY bc.write_time DESC";
                         q = String.format(q, startDateStr, endDateStr);
@@ -817,8 +816,7 @@ public final class WAREHOUSE_FG_UI0002_PALLET_LIST extends javax.swing.JFrame {
                         q += " AND bc.shipped_time < '%s' ORDER BY bc.write_time DESC";
                         q = String.format(q, endDateStr);
                     }
-                }
-                else if (UIHelper.listContains(selected, GlobalVars.PALLET_CLOSED)) {
+                } else if (UIHelper.listContains(selected, GlobalVars.PALLET_CLOSED)) {
                     if (startDatePicker.getDate() != null && endDatePicker.getDate() != null) {
                         q += " AND container_state ='" + GlobalVars.PALLET_CLOSED + "' AND bc.closed_time BETWEEN '%s' AND '%s' ORDER BY bc.closed_time DESC";
                         q = String.format(q, startDateStr, endDateStr);
@@ -867,8 +865,7 @@ public final class WAREHOUSE_FG_UI0002_PALLET_LIST extends javax.swing.JFrame {
                         q += " AND bc.shipped_time < '%s' ORDER BY bc.write_time DESC";
                         q = String.format(q, endDateStr);
                     }
-                } 
-                else {
+                } else {
                     if (startDatePicker.getDate() != null && endDatePicker.getDate() != null) {
                         q += " AND bc.write_time BETWEEN '%s' AND '%s' ORDER BY bc.write_time DESC";
                         q = String.format(q, startDateStr, endDateStr);

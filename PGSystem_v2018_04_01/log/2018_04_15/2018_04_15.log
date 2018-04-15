@@ -1,0 +1,470 @@
+avr. 15, 2018 11:37:49 AM ui.UILog log
+INFOS: File 2018_04_15.log is created!
+
+avr. 15, 2018 11:37:49 AM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] created !
+Print sub directory [.\print\2018_04_15.\open_sheet] created !
+Print sub directory [.\print\2018_04_15.\closing_sheet] created !
+Print sub directory [.\print\2018_04_15.\picking_label] created !
+Print sub directory [.\print\2018_04_15.\dispatch_label] created !
+
+avr. 15, 2018 11:38:19 AM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 11:38:19 AM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 11:39:05 AM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 11:39:09 AM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 11:39:13 AM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 11:39:48 AM ui.UILog log
+INFOS: Searching Container [200035356] in BaseContainer.
+avr. 15, 2018 11:39:48 AM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 11:39:54 AM ui.UILog log
+INFOS: Searching Container [200035356] in BaseContainer.
+avr. 15, 2018 11:39:54 AM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 11:40:57 AM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 11:42:26 AM ui.UILog log
+INFOS: Searching Container [200035355] in BaseContainer.
+avr. 15, 2018 11:42:26 AM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 11:42:30 AM ui.UILog log
+INFOS: Searching Container [200035355] in BaseContainer.
+avr. 15, 2018 11:42:30 AM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 11:49:37 AM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 11:49:37 AM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 11:49:46 AM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 11:49:50 AM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 11:50:51 AM ui.UILog log
+INFOS: Searching Container [200035354] in BaseContainer.
+avr. 15, 2018 11:50:51 AM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 11:51:54 AM ui.UILog log
+INFOS: Searching Container [200035354] in BaseContainer.
+avr. 15, 2018 11:51:54 AM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 12:00:22 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 12:00:22 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 12:00:27 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 12:00:31 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 12:01:24 PM ui.UILog log
+INFOS: Searching Container [200024511] in BaseContainer.
+avr. 15, 2018 12:01:24 PM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 12:01:39 PM ui.UILog log
+INFOS: Searching Container [200024511] in BaseContainer.
+avr. 15, 2018 12:01:39 PM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 12:02:19 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:02:19 Packaging warehouse interface : .
+avr. 15, 2018 12:04:53 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 12:04:53 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 12:05:01 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 12:05:07 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 12:05:37 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 12:05:37 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 12:05:48 PM ui.UILog log
+INFOS: Searching Container [0024946] in BaseContainer.
+avr. 15, 2018 12:05:48 PM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 12:05:52 PM ui.UILog log
+INFOS: Searching Container [200024946] in BaseContainer.
+avr. 15, 2018 12:05:52 PM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 12:06:01 PM ui.UILog log
+INFOS: Searching Container [200024946] in BaseContainer.
+avr. 15, 2018 12:06:01 PM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 12:07:39 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:07:39 Packaging warehouse interface : .
+avr. 15, 2018 12:12:03 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 12:12:03 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 12:12:23 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:12:23 Packaging warehouse interface : .
+avr. 15, 2018 12:12:36 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 12:12:40 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 12:12:58 PM ui.UILog log
+INFOS: Searching Container [200025912] in BaseContainer.
+avr. 15, 2018 12:12:58 PM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 12:13:18 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 12:13:31 PM ui.UILog log
+INFOS: Searching Container [200026803] in BaseContainer.
+avr. 15, 2018 12:13:31 PM ui.UILog log
+INFOS: FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state
+avr. 15, 2018 12:15:22 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 12:15:22 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 12:17:41 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:17:41 Dispatch interface : .
+avr. 15, 2018 12:18:04 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:18:04 Dispatch interface : .
+avr. 15, 2018 12:21:37 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 12:21:37 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 12:21:45 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:21:45 Dispatch interface : .
+avr. 15, 2018 12:22:38 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:22:38 Dispatch interface : .
+avr. 15, 2018 12:22:56 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 12:22:56 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 12:22:59 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:22:59 Dispatch interface : .
+avr. 15, 2018 12:28:59 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 12:28:59 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 12:29:03 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:29:03 Dispatch interface : .
+avr. 15, 2018 12:29:47 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC
+avr. 15, 2018 12:29:47 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC
+avr. 15, 2018 12:30:50 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:30:50 Packaging warehouse interface : .
+avr. 15, 2018 12:32:16 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:32:16 Dispatch interface : .
+avr. 15, 2018 12:51:16 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 12:51:16 Dispatch interface : .
+avr. 15, 2018 1:37:14 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 1:37:14 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 1:44:39 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 1:44:39 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 2:55:20 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 2:55:20 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 2:56:42 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 2:56:42 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:00:56 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:00:56 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:02:10 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:02:10 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:03:17 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 15:03:17 Dispatch interface : .
+avr. 15, 2018 3:06:25 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:06:25 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:10:25 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:10:25 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:11:01 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:16 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:18 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:19 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:19 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:23 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:26 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:35 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:36 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:37 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:43 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:49 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:50 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:52 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:11:52 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:12:02 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:12:08 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:12:09 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:12:39 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 15:12:39 Dispatch interface : .
+avr. 15, 2018 3:18:33 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:18:33 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:18:38 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 15:18:38 Dispatch interface : .
+avr. 15, 2018 3:19:46 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:19:48 PM ui.UILog log
+INFOS: FROM ConfigWorkplace bp ORDER BY workplace ASC
+avr. 15, 2018 3:22:37 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC
+avr. 15, 2018 3:22:37 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC
+avr. 15, 2018 3:24:44 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:24:44 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:24:57 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 15:24:57 Dispatch interface : .
+avr. 15, 2018 3:26:45 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:26:45 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:27:03 PM ui.UILog log
+INFOS: APP_INFO0003 : User EZZIOURI OUSSAMA / * connected to host Oussama-PC at 2018-04-15 15:27:03 Dispatch interface : .
+avr. 15, 2018 3:29:30 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:29:30 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:29:52 PM ui.UILog log
+INFOS: APP_INFO0003 : User Ahmad TABIT / ** connected to host Oussama-PC at 2018-04-15 15:29:52 Dispatch interface : .
+avr. 15, 2018 3:30:32 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:30:32 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:32:49 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:32:49 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:33:53 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:33:53 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:35:10 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:35:10 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:35:15 PM ui.UILog log
+INFOS: APP_INFO0003 : User EZZIOURI OUSSAMA / * connected to host Oussama-PC at 2018-04-15 15:35:15 Dispatch interface : .
+avr. 15, 2018 3:36:57 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:36:57 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:37:03 PM ui.UILog log
+INFOS: APP_INFO0003 : User EZZIOURI OUSSAMA / * connected to host Oussama-PC at 2018-04-15 15:37:03 Dispatch interface : .
+avr. 15, 2018 3:38:29 PM ui.UILog log
+INFOS: File 2018_04_15.log already exists.
+
+avr. 15, 2018 3:38:29 PM ui.UILog log
+INFOS: Print directory [.\print\2018_04_15] already exist!
+Print sub directory [.\print\2018_04_15.\open_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\closing_sheet] already exist!
+Print sub directory [.\print\2018_04_15.\picking_label] already exist!
+Print sub directory [.\print\2018_04_15.\dispatch_label] already exist!
+
+avr. 15, 2018 3:38:38 PM ui.UILog log
+INFOS: APP_INFO0003 : User EZZIOURI OUSSAMA / * connected to host Oussama-PC at 2018-04-15 15:38:38 Dispatch interface : .
+avr. 15, 2018 3:38:54 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC
+avr. 15, 2018 3:38:54 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC
+avr. 15, 2018 3:38:54 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC
+avr. 15, 2018 3:38:54 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC
+avr. 15, 2018 3:39:40 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC
+avr. 15, 2018 3:39:40 PM ui.UILog log
+INFOS: FROM ConfigBarcode cb WHERE cb.keyWord = :keyWord ORDER BY id ASC

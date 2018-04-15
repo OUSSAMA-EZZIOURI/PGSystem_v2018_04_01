@@ -14,6 +14,7 @@ public class HQLHelper {
     //ManufactureUsers
     public final static String CHECK_LOGIN_ONLY = "FROM ManufactureUsers mu WHERE mu.login = :login";
     public final static String CHECK_LOGIN_PASS = "FROM ManufactureUsers mu WHERE mu.login = :login AND mu.password = :password";
+    public final static String CHECK_LOGIN_PASS_LEVEL = "FROM ManufactureUsers mu WHERE mu.login = :login AND mu.password = :password AND mu.accessLevel IN (:accessLevels)";
     public final static String CHECK_LOGIN = "FROM ManufactureUsers mu WHERE mu.login = :login AND mu.active = :active AND mu.harnessType = :harnessType";
     public final static String CHECK_LOGIN_PASSWORD_IN_PROJECT = "FROM ManufactureUsers mu WHERE mu.login = :login AND mu.password = :password";
     public final static String GET_USER_BY_LOGIN = "FROM ManufactureUsers mu WHERE mu.login = :login";
@@ -21,6 +22,8 @@ public class HQLHelper {
     //BaseContainer
     public final static String GET_ALL_CONTAINER = "FROM BaseContainer bc ORDER BY createTime DESC";
     public final static String GET_CONTAINER_BY_NUMBER = "FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber";
+    public final static String GET_CONTAINER_BY_FORS_SERIAL = "FROM BaseContainer bc WHERE bc.dispatchLabelNo = :dispatchLabelNo";
+    public final static String GET_CONTAINER_BY_NUMBER_AND_FORS_SERIAL = "FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.dispatchLabelNo = :dispatchLabelNo";
     public final static String GET_CONTAINER_BY_NAME_AND_STATE = "FROM BaseContainer bc WHERE bc.palletNumber = :palletNumber AND bc.containerState = :state";
     public final static String GET_CONTAINER_BY_STATE = "FROM BaseContainer bc WHERE bc.containerState = :state ORDER BY createTime DESC";
     public final static String GET_CONTAINER_BY_STATES = "FROM BaseContainer bc WHERE bc.containerState IN (:states) ORDER BY createTime DESC";

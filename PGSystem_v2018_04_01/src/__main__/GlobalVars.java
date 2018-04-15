@@ -263,6 +263,7 @@ public class GlobalVars {
      *
      */
     public static final Integer PROFIL_OPERATOR = 1000;
+    public static final Integer PROFIL_WAREHOUSE_AGENT = 2000;
     /**
      *
      */

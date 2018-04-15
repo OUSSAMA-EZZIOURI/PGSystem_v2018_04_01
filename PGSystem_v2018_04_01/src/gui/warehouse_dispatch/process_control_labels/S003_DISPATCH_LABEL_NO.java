@@ -63,10 +63,17 @@ public class S003_DISPATCH_LABEL_NO implements ControlState {
                 Query query = Helper.sess.createQuery(HQLHelper.SET_LOAD_PLAN_LINE_PRODLABEL_TO_DISPATCHLABEL);
                 query.setParameter("dispatchLabelNo", this.dispatchLabelNo);
                 query.setParameter("palletNumber", bc.getPalletNumber());
-                int result = query.executeUpdate();
-                System.out.println(String.format("%s Line updated.", result));
+                int result = query.executeUpdate();                
+                System.out.println(String.format("%s Line updated.", result));              
+                Helper.sess.beginTransaction();
                 Helper.sess.getTransaction().commit();
-                Helper.sess.clear();
+                //Helper.sess.clear();
+                
+                Helper.startSession();
+                bc.setDispatchLabelNo(this.dispatchLabelNo);
+                bc.update(bc);
+                Helper.sess.beginTransaction();
+                Helper.sess.getTransaction().commit();
                 
                 SoundHelper.PlayOkSound(null);
                 clearScanBox(scan_txtbox);

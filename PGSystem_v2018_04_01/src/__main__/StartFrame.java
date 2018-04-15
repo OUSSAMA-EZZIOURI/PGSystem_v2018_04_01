@@ -30,6 +30,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingWorker;
 import gui.packaging.mode2.state.Mode2_S010_UserCodeScan;
+import gui.warehouse_fg_reception.WAREHOUSE_FG_UI0003_PasswordRequest;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javassist.bytecode.stackmap.TypeData.ClassName;
@@ -452,8 +453,10 @@ public class StartFrame extends javax.swing.JFrame implements ActionListener,
     }//GEN-LAST:event_PACKAGING_MODULEActionPerformed
 
     private void WAREHOUSE_INPUT_MODULEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WAREHOUSE_INPUT_MODULEActionPerformed
-        new WAREHOUSE_FG_UI0001_SCAN(null, this).setVisible(true);
+        //new WAREHOUSE_FG_UI0001_SCAN(null, this).setVisible(true);
         //this.setExtendedState(this.getExtendedState() | JFrame.ICONIFIED);
+        new WAREHOUSE_FG_UI0003_PasswordRequest(null, true).setVisible(true);
+        this.setExtendedState(this.getExtendedState() | JFrame.ICONIFIED);
     }//GEN-LAST:event_WAREHOUSE_INPUT_MODULEActionPerformed
 
     private void WAREHOUSE_DISPATCH_MODULEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WAREHOUSE_DISPATCH_MODULEActionPerformed

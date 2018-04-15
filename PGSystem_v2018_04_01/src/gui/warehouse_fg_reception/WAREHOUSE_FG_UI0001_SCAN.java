@@ -13,6 +13,7 @@ import entity.BaseContainer;
 import entity.BaseHarness;
 import entity.HisBaseContainer;
 import entity.HisLogin;
+import entity.ManufactureUsers;
 import entity.PackagingStockMovement;
 import gui.packaging.PackagingVars;
 import gui.packaging.reports.PACKAGING_UI0014_PalletHistory;
@@ -37,18 +38,20 @@ public class WAREHOUSE_FG_UI0001_SCAN extends javax.swing.JFrame {
     Vector<String> searchResult_table_header = new Vector<String>();
     Vector searchResult_table_data = new Vector();
     private BaseContainer bc = new BaseContainer();
+    private ManufactureUsers u = new ManufactureUsers();
 
     /**
      * Creates new form UI0010_PalletDetails
      *
      * @param context
      * @param parent
+     * @param u
      */
-    public WAREHOUSE_FG_UI0001_SCAN(Object[] context, JFrame parent) {
+    public WAREHOUSE_FG_UI0001_SCAN(Object[] context, JFrame parent, ManufactureUsers u) {
         initComponents();
         //Initialiser les valeurs globales de test (Pattern Liste,...)
         Helper.startSession();
-
+        this.u = u;
         initGui();
 
         this.setVisible(true);
@@ -779,56 +782,22 @@ public class WAREHOUSE_FG_UI0001_SCAN extends javax.swing.JFrame {
                 Date fifoTime = new Date();
                 bc.setContainerState(GlobalVars.PALLET_STORED);
                 bc.setContainerStateCode(GlobalVars.PALLET_STORED_CODE);
+                //The user who receive the goods, not the one who created the pallet
+                bc.setCreateUser(this.u.getFirstName() + " " + this.u.getLastName());
+                bc.setUser(this.u.getLogin());
                 bc.setFifoTime(fifoTime);
                 bc.setStoredTime(fifoTime);
                 bc.update(bc);
                 System.out.println("store_txt.getText() " + store_txt.getText().substring(GlobalVars.CLOSING_PALLET_PREFIX.length()));
-//                Query query = Helper.sess.createQuery(HQLHelper.SET_CONTAINER_STATE_TO_STORED);
-//                query.setParameter("palletNumber", store_txt.getText().substring(GlobalVars.CLOSING_PALLET_PREFIX.length()));
-//                query.setParameter("containerState", GlobalVars.PALLET_STORED);
-//                query.setParameter("containerStateCode", GlobalVars.PALLET_STORED_CODE);
-//                query.setParameter("fifoTime", fifoTime);
-//                query.setParameter("storedTime", fifoTime);
-//                query.executeUpdate();
-
-//                String q = "UPDATE base_container SET container_state = '%s', "
-//                        + "container_state_code = '%s', "
-//                        + "write_time = '%s', "
-//                        + "stored_time = '%s'"
-//                        + " WHERE pallet_number = '%s'";
-//                q = String.format(q,
-//                        GlobalVars.PALLET_STORED,
-//                        GlobalVars.PALLET_STORED_CODE,
-//                        fifoTime.toString(),
-//                        fifoTime.toString(),
-//                        store_txt.getText().substring(GlobalVars.CLOSING_PALLET_PREFIX.length()));
-//                System.out.println("qq " + q);
-//                SQLQuery sqlQuery = Helper.sess.createSQLQuery(q);
-//                sqlQuery.executeUpdate();
                 System.out.println("Helper.sess.getFlushMode() " + Helper.sess.getFlushMode());
-                Helper.sess.getTransaction().commit();
-                //Helper.sess.flush();
-                //##########################################################
-                //Save container update in his_base_container.
                 Helper.sess.beginTransaction();
-                HisBaseContainer hbc = new HisBaseContainer();
-                System.out.println("Fifo TIme BC" + this.bc.getFifoTime());
-                System.out.println("Fifo TIme " + fifoTime);
-                this.bc.setFifoTime(fifoTime);
-                hbc = hbc.parseContainerData(this.bc, "");
-                hbc.setContainerState(GlobalVars.PALLET_STORED);
-                hbc.setContainerStateCode(GlobalVars.PALLET_STORED_CODE);
-                //hbc.setFifoTime(fifoTime);
-
-                hbc.create(hbc);
-
-                this.searchForPallet(store_txt.getText().substring(GlobalVars.CLOSING_PALLET_PREFIX.length()));
+                Helper.sess.getTransaction().commit();               
                 showMsg("Statut palette modifié !", 1);
-
-                if ("1".equals(GlobalVars.APP_PROP.getProperty("BOOK_PACKAGING").toString())) {
+                System.out.println("Book pack " + GlobalVars.APP_PROP.getProperty("BOOK_PACKAGING"));
+                if ("1".equals(GlobalVars.APP_PROP.getProperty("BOOK_PACKAGING"))) {
                     //Book packaging items
                     PackagingStockMovement pm = new PackagingStockMovement();
-                    pm.bookMasterPack(this.bc.getCreateUser(),
+                    pm.bookMasterPack(bc.getCreateUser(),
                             this.bc.getPackType(), 1, "IN", GlobalVars.APP_PROP.getProperty("WH_PACKAGING"),
                             GlobalVars.APP_PROP.getProperty("WH_FINISH_GOODS"),
                             "Finish goods storage in " + GlobalVars.APP_PROP.getProperty("WH_FINISH_GOODS") + " warehouse", this.bc.getPalletNumber());

@@ -45,7 +45,8 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
     private boolean emptyAccess = false;
     private boolean printOpenSheet = false;
     private boolean printCloseSheet = false;
-    private String PalletNumber = "";
+    private String palletNumber = "";
+    private String dispatchLabelNo = "";
 
     /**
      * Creates new form UI0010_PalletDetails
@@ -66,12 +67,12 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
      * @param modal
      * @param PalletNumber : Requested container number to be displayed
      */
-    public PACKAGING_UI0010_PalletDetails(java.awt.Frame parent, boolean modal, String PalletNumber) {
-        this.PalletNumber = PalletNumber;
+    public PACKAGING_UI0010_PalletDetails(java.awt.Frame parent, boolean modal, String PalletNumber, String forsSerial, int searchMode) {
+        this.palletNumber = PalletNumber;
         initComponents();
         initGui();
-        this.searchForPallet(PalletNumber);
-        this.search_txtbox.setText(PalletNumber);
+        this.searchForPallet(PalletNumber, forsSerial, searchMode);
+        this.palletNum_txtbox.setText(PalletNumber);
 
     }
 
@@ -108,16 +109,19 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
      *
      * @param parent
      * @param modal
-     * @param PalletNumber : Requested container number to be displayed
+     * @param palletNumber : Requested container number to be displayed
+     * @param dispatchLabelNo
+     * @param searchMode
      * @param drop : Show drop button in the form
      * @param printOpenSheet : Show print open sheet button in the form
      * @param printCloseSheet : Show print close sheet button in the form
      *
      */
     public PACKAGING_UI0010_PalletDetails(java.awt.Frame parent, boolean modal,
-            String PalletNumber, boolean drop, boolean printOpenSheet,
+            String palletNumber, String dispatchLabelNo, int searchMode, boolean drop, boolean printOpenSheet,
             boolean printCloseSheet) {
-        this.PalletNumber = PalletNumber;
+        this.palletNumber = palletNumber;
+        this.dispatchLabelNo = dispatchLabelNo;
         initComponents();
 
         this.setDropAccess(drop);
@@ -125,8 +129,8 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
         this.setPrintCloseSheet(printCloseSheet);
 
         initGui();
-        this.searchForPallet(PalletNumber);
-        this.search_txtbox.setText(PalletNumber);
+        this.searchForPallet(palletNumber, dispatchLabelNo, searchMode);
+        this.palletNum_txtbox.setText(palletNumber);
 
         System.out.println("state_txtbox.getText() " + state_txtbox.getText());
         //Avtiver/Desactiver le bouton "Continuer fermeture..."
@@ -158,7 +162,7 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
         //Load table header
         load_container_table_header();
 
-        this.setTitle(this.getTitle() + " " + this.PalletNumber);
+        this.setTitle(this.getTitle() + " " + this.palletNumber);
 
     }
 
@@ -214,7 +218,7 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        search_txtbox = new javax.swing.JTextField();
+        palletNum_txtbox = new javax.swing.JTextField();
         search_btn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         msg_lbl = new javax.swing.JLabel();
@@ -290,6 +294,8 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
         stdTime_txtbox = new javax.swing.JTextField();
         total_stdTime_txtbox = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
+        fors_serialno_txtbox = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
         pack_list_btn = new javax.swing.JButton();
         jSeparator5 = new javax.swing.JToolBar.Separator();
@@ -312,22 +318,22 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        search_txtbox.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        search_txtbox.setForeground(new java.awt.Color(0, 0, 153));
-        search_txtbox.addActionListener(new java.awt.event.ActionListener() {
+        palletNum_txtbox.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        palletNum_txtbox.setForeground(new java.awt.Color(0, 0, 153));
+        palletNum_txtbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                search_txtboxActionPerformed(evt);
+                palletNum_txtboxActionPerformed(evt);
             }
         });
-        search_txtbox.addKeyListener(new java.awt.event.KeyAdapter() {
+        palletNum_txtbox.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                search_txtboxKeyPressed(evt);
+                palletNum_txtboxKeyPressed(evt);
             }
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                search_txtboxKeyReleased(evt);
+                palletNum_txtboxKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                search_txtboxKeyTyped(evt);
+                palletNum_txtboxKeyTyped(evt);
             }
         });
 
@@ -985,6 +991,28 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
         jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setText("Total Standard Time");
 
+        fors_serialno_txtbox.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        fors_serialno_txtbox.setForeground(new java.awt.Color(0, 0, 153));
+        fors_serialno_txtbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fors_serialno_txtboxActionPerformed(evt);
+            }
+        });
+        fors_serialno_txtbox.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                fors_serialno_txtboxKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                fors_serialno_txtboxKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fors_serialno_txtboxKeyTyped(evt);
+            }
+        });
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("FORS Serial Number");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -999,6 +1027,23 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(palletNum_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(fors_serialno_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(clear_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(search_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(history_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(continue_btn))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel17)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel30)
@@ -1011,23 +1056,8 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel15)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(palletNumber_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(search_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                                        .addComponent(clear_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(search_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
-                                        .addGap(308, 308, 308)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(history_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(continue_btn)))
-                        .addGap(0, 201, Short.MAX_VALUE))))
+                                .addComponent(palletNumber_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(20, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1037,16 +1067,20 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
                     .addComponent(jLabel15)
                     .addComponent(palletNumber_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel5))
                 .addGap(5, 5, 5)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(continue_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(search_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(search_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(clear_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(history_btn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(palletNum_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fors_serialno_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(continue_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(search_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(clear_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(history_btn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(5, 5, 5)
                 .addComponent(msg_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1172,8 +1206,8 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
 
     public void clearSearchBox() {
         //Vider le champs de text scan
-        search_txtbox.setText("");
-        search_txtbox.requestFocusInWindow();
+        palletNum_txtbox.setText("");
+        palletNum_txtbox.requestFocusInWindow();
     }
 
     public void load_container_table_header() {
@@ -1245,73 +1279,106 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
         planDispatchTime_txtbox.setText("" + plan.getDeliveryTime());
         planDestination_txtbox.setText("" + l.getDestinationWh());
         planStatus_txtbox.setText(plan.getPlanState());
-        
+
     }
 
     private void clearLoadPlanFields() {
         loadPlanId_txtbox.setText("");
         pile_txtbox.setText("");
         planCreateTime_txtbox.setText("");
+        position_txtbox.setText("");
         planDispatchTime_txtbox.setText("");
         planDestination_txtbox.setText("");
         planStatus_txtbox.setText("");
         planCreateUser_txtbox.setText("");
         lineCreateUser_txtbox.setText("");
+        lineCreateTime_txtbox.setText("");
     }
 
-    private void searchForPallet(String palletNumber) {
+    /**
+     *
+     * @param palletNumber
+     * @param mode 1 = search by production pallet num, 2 by fors serial number,
+     * 3 both
+     */
+    private void searchForPallet(String palletNumber, String dispatchLabelNo, int mode) {
         msg_lbl.setText("");
 
         this.clearContainerFieldsValues();
+        this.clearLoadPlanFields();
         this.reset_container_table_content();
-        if (!palletNumber.trim().equals("")) {
-            if (palletNumber.startsWith(GlobalVars.CLOSING_PALLET_PREFIX)) {
-                palletNumber = palletNumber.substring(2);
-            }
-            System.out.println("palletNumber" + palletNumber);
-            //################# Container Data ####################
-            //Start transaction                
-            Helper.startSession();
-            Query query = Helper.sess.createQuery(HQLHelper.GET_CONTAINER_BY_NUMBER);
-            query.setParameter("palletNumber", palletNumber.trim());
-            Helper.sess.getTransaction().commit();
-            List result = query.list();
-            if (result.isEmpty()) {
-                msg_lbl.setText("Pallet not found !");
-                this.reset_container_table_content();
-                //Show / Hide tools buttons
-            } else {
-                msg_lbl.setText("");
-                System.out.println("Resultat found " + result.size());
-                this.setBaseContainer((BaseContainer) result.get(0));
-                this.setContainerFieldsValues(this.bc);
-                //################# Harness Data ####################
-                Helper.startSession();
-                query = Helper.sess.createQuery(HQLHelper.GET_HP_BY_PALLET_NUMBER);
-                query.setParameter("palletNumber", palletNumber.trim());
-                Helper.sess.getTransaction().commit();
-                result = query.list();
 
-                //reload table data                
-                this.reload_container_table_data(result);
-
-                //################# LoadPlan line data ####################
-                Helper.startSession();
-                query = Helper.sess.createQuery(HQLHelper.GET_LOAD_PLAN_LINE_BY_PAL_NUM);
-                query.setParameter("palletNumber", palletNumber.trim());
-                Helper.sess.getTransaction().commit();
-                result = query.list();
-                //Reload LoadPlan line details
-                if (!result.isEmpty()) {
-                    this.reload_load_plan_data(result);
-                }
-
-            }
-
-        } else {
-            msg_lbl.setText("Num. palette introuvable !");
-            clearSearchBox();
+        if (!palletNumber.trim().equals("") && palletNumber.startsWith(GlobalVars.CLOSING_PALLET_PREFIX)) {
+            palletNumber = palletNumber.substring(2);
         }
+
+        System.out.println("palletNumber" + palletNumber);
+        //################# Container Data ####################
+        //Start transaction                
+        Query query = null;
+        Helper.startSession();
+        switch (mode) {
+            case 1:
+                //Search by production serial
+                System.out.println("search mode 1 " + palletNumber);
+                query = Helper.sess.createQuery(HQLHelper.GET_CONTAINER_BY_NUMBER);
+                query.setParameter("palletNumber", palletNumber.trim());
+                Helper.sess.getTransaction().commit();
+                break;
+            case 2:
+                //Search by fors serial
+                System.out.println("search mode 2 " + dispatchLabelNo);
+                query = Helper.sess.createQuery(HQLHelper.GET_CONTAINER_BY_FORS_SERIAL);
+                query.setParameter("dispatchLabelNo", dispatchLabelNo.trim());
+                Helper.sess.getTransaction().commit();
+                break;
+            case 3:
+                System.out.println("search mode 3 " + palletNumber + " " + dispatchLabelNo);
+                query = Helper.sess.createQuery(HQLHelper.GET_CONTAINER_BY_NUMBER_AND_FORS_SERIAL);
+                query.setParameter("palletNumber", palletNumber.trim());
+                query.setParameter("dispatchLabelNo", dispatchLabelNo.trim());
+                Helper.sess.getTransaction().commit();
+                break;
+            default:
+                break;
+        }
+        List result = query.list();
+        if (result.isEmpty()) {
+            msg_lbl.setText("Num. palette introuvable !");
+            this.reset_container_table_content();
+            //Show / Hide tools buttons
+        } else {
+            msg_lbl.setText("");
+            System.out.println("Result found " + result.size());
+            this.setBaseContainer((BaseContainer) result.get(0));
+            this.setContainerFieldsValues(this.bc);
+            //################# Harness Data ####################
+            Helper.startSession();
+            query = Helper.sess.createQuery(HQLHelper.GET_HP_BY_PALLET_NUMBER);
+            query.setParameter("palletNumber", this.bc.getPalletNumber());
+            Helper.sess.getTransaction().commit();
+            result = query.list();
+
+            //reload table data                
+            this.reload_container_table_data(result);
+
+            //################# LoadPlan line data ####################
+            Helper.startSession();
+            query = Helper.sess.createQuery(HQLHelper.GET_LOAD_PLAN_LINE_BY_PAL_NUM);
+            query.setParameter("palletNumber", this.bc.getPalletNumber());
+            Helper.sess.getTransaction().commit();
+            result = query.list();
+            //Reload LoadPlan line details
+            if (!result.isEmpty()) {
+                this.reload_load_plan_data(result);
+            }
+        }
+        
+//          else {
+//            msg_lbl.setText("Num. palette introuvable !");
+//            clearSearchBox();
+//        } 
+
     }
 
     private void setContainerFieldsValues(BaseContainer bc) {
@@ -1326,8 +1393,8 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
         qtyExptected_txtbox.setText(String.valueOf(bc.getQtyExpected()));
         qtyRead_txtbox.setText(String.valueOf(bc.getQtyRead()));
         packType_txtbox.setText(bc.getPackType());
-        stdTime_txtbox.setText(bc.getStdTime()+"");
-        total_stdTime_txtbox.setText(""+(bc.getStdTime()*bc.getQtyRead()));
+        stdTime_txtbox.setText(bc.getStdTime() + "");
+        total_stdTime_txtbox.setText("" + (bc.getStdTime() * bc.getQtyRead()));
         if (bc.getSpecial_order() != null && bc.getSpecial_order() == 1) {
             special_order_txtbox.setText("SPECIAL");
         } else {
@@ -1340,8 +1407,7 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
         }
         workingTime_txtbox.setText(String.valueOf(bc.getWorkTime()));
         comment_txt.setText(bc.getComment());
-        
-        
+
     }
 
     public void clearContainerFieldsValues() {
@@ -1389,7 +1455,7 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
 
     private void printOpenSheetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printOpenSheetButtonActionPerformed
         msg_lbl.setText("");
-        if (!search_txtbox.getText().isEmpty()) {
+        if (!palletNum_txtbox.getText().isEmpty()) {
             Query query = Helper.sess.createQuery(HQLHelper.GET_OPEN_SHEET);
             query.setParameter("id", Integer.valueOf(palletNumber_txtbox.getText()));
             Helper.sess.beginTransaction();
@@ -1411,7 +1477,7 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
 
     private void printCloseSheetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printCloseSheetButtonActionPerformed
         msg_lbl.setText("");
-        if (!search_txtbox.getText().isEmpty()) {
+        if (!palletNum_txtbox.getText().isEmpty()) {
             Query query = Helper.sess.createQuery(HQLHelper.GET_CONTAINER_BY_NUMBER);
             query.setParameter("palletNumber", palletNumber_txtbox.getText());
             Helper.sess.beginTransaction();
@@ -1534,7 +1600,7 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
 
     private void clear_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear_btnActionPerformed
 
-        search_txtbox.setText("");
+        palletNum_txtbox.setText("");
     }//GEN-LAST:event_clear_btnActionPerformed
 
     private void continue_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continue_btnActionPerformed
@@ -1569,59 +1635,61 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
 
     private void search_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_btnActionPerformed
 
-        this.searchForPallet(search_txtbox.getText());
-        this.setTitle(search_txtbox.getText());
+        System.out.println("production_num " + palletNum_txtbox.getText());
+        System.out.println("fors_serialno " + fors_serialno_txtbox.getText());
+        if (fors_serialno_txtbox.getText().isEmpty() && !palletNum_txtbox.getText().isEmpty()) {
+            this.searchForPallet(palletNum_txtbox.getText(), "", 1);
+        } else if (palletNum_txtbox.getText().isEmpty() && !fors_serialno_txtbox.getText().isEmpty()) {
+            this.searchForPallet("", fors_serialno_txtbox.getText(), 2);
+        } else {
+            this.searchForPallet(palletNum_txtbox.getText(), fors_serialno_txtbox.getText(), 3);
+        }
+        this.setTitle(palletNum_txtbox.getText());
     }//GEN-LAST:event_search_btnActionPerformed
 
-    private void search_txtboxKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_txtboxKeyTyped
-        if (!search_txtbox.getText().isEmpty()) {
-            search_btn.setEnabled(true);
+    private void palletNum_txtboxKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_palletNum_txtboxKeyTyped
+        if (!palletNumber_txtbox.getText().isEmpty()) {
             history_btn.setEnabled(true);
         } else {
-            search_btn.setEnabled(false);
             history_btn.setEnabled(false);
             msg_lbl.setText("");
         }
-    }//GEN-LAST:event_search_txtboxKeyTyped
+    }//GEN-LAST:event_palletNum_txtboxKeyTyped
 
-    private void search_txtboxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_txtboxKeyReleased
-        if (!search_txtbox.getText().isEmpty()) {
-            search_btn.setEnabled(true);
+    private void palletNum_txtboxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_palletNum_txtboxKeyReleased
+        if (!palletNumber_txtbox.getText().isEmpty()) {
             history_btn.setEnabled(true);
         } else {
-            search_btn.setEnabled(false);
             history_btn.setEnabled(false);
             msg_lbl.setText("");
         }
-    }//GEN-LAST:event_search_txtboxKeyReleased
+    }//GEN-LAST:event_palletNum_txtboxKeyReleased
 
-    private void search_txtboxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_txtboxKeyPressed
+    private void palletNum_txtboxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_palletNum_txtboxKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            if (search_txtbox.getText().startsWith(GlobalVars.CLOSING_PALLET_PREFIX)) {
-                this.searchForPallet(search_txtbox.getText().substring(GlobalVars.CLOSING_PALLET_PREFIX.length()));
+            if (palletNum_txtbox.getText().startsWith(GlobalVars.CLOSING_PALLET_PREFIX)) {
+                this.searchForPallet(palletNum_txtbox.getText().substring(GlobalVars.CLOSING_PALLET_PREFIX.length()), "", 1);
             } else {
-                this.searchForPallet(search_txtbox.getText());
+                this.searchForPallet(palletNum_txtbox.getText(), "", 1);
             }
         } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
             this.dispose();
         } else if (evt.getKeyCode() == KeyEvent.VK_CLEAR) {
-            this.search_txtbox.setText("");
+            this.palletNum_txtbox.setText("");
             this.reset_container_table_content();
         } else {
-            if (!search_txtbox.getText().isEmpty()) {
-                search_btn.setEnabled(true);
+            if (!palletNumber_txtbox.getText().isEmpty()) {
                 history_btn.setEnabled(true);
-            } else {
-                search_btn.setEnabled(false);
-                history_btn.setEnabled(false);
                 msg_lbl.setText("");
+            } else{
+                history_btn.setEnabled(false);
             }
         }
-    }//GEN-LAST:event_search_txtboxKeyPressed
+    }//GEN-LAST:event_palletNum_txtboxKeyPressed
 
-    private void search_txtboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_txtboxActionPerformed
+    private void palletNum_txtboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palletNum_txtboxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_search_txtboxActionPerformed
+    }//GEN-LAST:event_palletNum_txtboxActionPerformed
 
     private void position_txtboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_position_txtboxActionPerformed
         // TODO add your handling code here:
@@ -1643,6 +1711,22 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_dispatchLabelNo_txtboxActionPerformed
 
+    private void fors_serialno_txtboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fors_serialno_txtboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fors_serialno_txtboxActionPerformed
+
+    private void fors_serialno_txtboxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fors_serialno_txtboxKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fors_serialno_txtboxKeyPressed
+
+    private void fors_serialno_txtboxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fors_serialno_txtboxKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fors_serialno_txtboxKeyReleased
+
+    private void fors_serialno_txtboxKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fors_serialno_txtboxKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fors_serialno_txtboxKeyTyped
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton clear_btn;
     private javax.swing.JTextArea comment_txt;
@@ -1652,6 +1736,7 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
     private javax.swing.JTextField dispatchLabelNo_txtbox;
     private javax.swing.JButton dropButton;
     private javax.swing.Box.Filler filler1;
+    private javax.swing.JTextField fors_serialno_txtbox;
     private javax.swing.JTextField harnessPart_txtbox;
     private javax.swing.JButton history_btn;
     private javax.swing.JTextField index_txtbox;
@@ -1682,6 +1767,7 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1705,6 +1791,7 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
     private javax.swing.JTextField packType_txtbox;
     private javax.swing.JButton pack_list_btn;
     private javax.swing.JTextField palletId_txtbox;
+    private javax.swing.JTextField palletNum_txtbox;
     private javax.swing.JTextField palletNumber_txtbox;
     private javax.swing.JTextField pile_txtbox;
     private javax.swing.JTextField planCreateTime_txtbox;
@@ -1719,7 +1806,6 @@ public final class PACKAGING_UI0010_PalletDetails extends javax.swing.JFrame {
     private javax.swing.JTextField qtyRead_txtbox;
     private javax.swing.JTable searchResult_table;
     private javax.swing.JButton search_btn;
-    private javax.swing.JTextField search_txtbox;
     private javax.swing.JTextField special_order_txtbox;
     private javax.swing.JTextField startTime_txtbox;
     private javax.swing.JTextField state_txtbox;

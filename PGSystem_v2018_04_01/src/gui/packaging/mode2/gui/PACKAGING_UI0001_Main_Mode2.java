@@ -92,16 +92,12 @@ public final class PACKAGING_UI0001_Main_Mode2 extends javax.swing.JFrame implem
     public PACKAGING_UI0001_Main_Mode2(Object[] context, JFrame parent) {
         initComponents();
         //Initialiser les valeurs globales de test (Pattern Liste,...)
-        
-        
+
         Helper.startSession();
 
         //loadBarcodeConfig();
-
         initGui();
     }
-
-    
 
     public void initGui() {
         //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
@@ -154,7 +150,6 @@ public final class PACKAGING_UI0001_Main_Mode2 extends javax.swing.JFrame implem
 
         //Load table header
         //load_table_header();
-        
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
         addKeyListener(this);
@@ -197,7 +192,7 @@ public final class PACKAGING_UI0001_Main_Mode2 extends javax.swing.JFrame implem
             oneRow.add(bc.getHarnessType());
             oneRow.add(bc.getContainerState());
             container_table_data.add(oneRow);
-            System.out.println("Container to add "+bc.toString());
+            System.out.println("Container to add " + bc.toString());
         }
         container_table.setModel(new DefaultTableModel(container_table_data, container_table_header));
 
@@ -265,18 +260,18 @@ public final class PACKAGING_UI0001_Main_Mode2 extends javax.swing.JFrame implem
     private void initContainerTableDoubleClick() {
 
         this.container_table.addMouseListener(new MouseAdapter() {
-                    public void mouseClicked(MouseEvent e) {
-                        if (e.getClickCount() == 2) {
-                            if (PackagingVars.context.getUser() == null) {
-                                new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(container_table.getValueAt(container_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), false, false, false).setVisible(true);
-                            } else if (PackagingVars.context.getUser().getAccessLevel() == GlobalVars.PROFIL_ADMIN) {
-                                new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(container_table.getValueAt(container_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), true, true, true).setVisible(true);
-                            } else {
-                                new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(container_table.getValueAt(container_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), false, false, false).setVisible(true);
-                            }
-                        }
+            public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 2) {
+                    if (PackagingVars.context.getUser() == null) {
+                        new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(container_table.getValueAt(container_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), "", 1, false, false, false).setVisible(true);
+                    } else if (PackagingVars.context.getUser().getAccessLevel() == GlobalVars.PROFIL_ADMIN) {
+                        new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(container_table.getValueAt(container_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), "", 1, true, true, true).setVisible(true);
+                    } else {
+                        new PACKAGING_UI0010_PalletDetails(null, rootPaneCheckingEnabled, String.valueOf(container_table.getValueAt(container_table.getSelectedRow(), PALLET_NUMBER_COLINDEX)), "", 1, false, false, false).setVisible(true);
                     }
                 }
+            }
+        }
         );
     }
 
@@ -701,8 +696,8 @@ public final class PACKAGING_UI0001_Main_Mode2 extends javax.swing.JFrame implem
     public JComboBox getHarnessTypeBox() {
         return harnessTypeBox;
     }
-    
-    public void setHarnessTypeFilterBoxState(boolean state){
+
+    public void setHarnessTypeFilterBoxState(boolean state) {
         this.harnessTypeFilterBox.setEnabled(state);
     }
 
@@ -734,49 +729,52 @@ public final class PACKAGING_UI0001_Main_Mode2 extends javax.swing.JFrame implem
     //################ Reset GUI Component to Mode2_State S01 ######################
     //########################################################################
     public void logout() {
+        try {
+            //Save authentication line in HisLogin table
+            if (PackagingVars.context.getUser().getId() != null) {
+                HisLogin his_login = new HisLogin(
+                        PackagingVars.context.getUser().getId(), PackagingVars.context.getUser().getId(),
+                        String.format(Helper.INFO0012_LOGOUT_SUCCESS,
+                                PackagingVars.context.getUser().getFirstName()
+                                + " " + PackagingVars.context.getUser().getLastName()
+                                + " / " + PackagingVars.context.getUser().getLogin(),
+                                GlobalVars.APP_HOSTNAME, GlobalMethods.getStrTimeStamp()));
+                his_login.setCreateId(PackagingVars.context.getUser().getId());
+                his_login.setWriteId(PackagingVars.context.getUser().getId());
 
-        //Save authentication line in HisLogin table
-        if (PackagingVars.context.getUser().getId() != null) {
-            HisLogin his_login = new HisLogin(
-                    PackagingVars.context.getUser().getId(), PackagingVars.context.getUser().getId(),
-                    String.format(Helper.INFO0012_LOGOUT_SUCCESS,
-                            PackagingVars.context.getUser().getFirstName()
-                            + " " + PackagingVars.context.getUser().getLastName()
-                            + " / " + PackagingVars.context.getUser().getLogin(),
-                            GlobalVars.APP_HOSTNAME, GlobalMethods.getStrTimeStamp()));
-            his_login.setCreateId(PackagingVars.context.getUser().getId());
-            his_login.setWriteId(PackagingVars.context.getUser().getId());
+                str = String.format(Helper.INFO0012_LOGOUT_SUCCESS,
+                        PackagingVars.context.getUser().getFirstName() + " " + PackagingVars.context.getUser().getLastName()
+                        + " / " + PackagingVars.context.getUser().getLogin(), GlobalVars.APP_HOSTNAME,
+                        GlobalMethods.getStrTimeStamp() + " Project : "
+                        + PackagingVars.context.getUser().getHarnessType());
+                his_login.setMessage(str);
 
-            str = String.format(Helper.INFO0012_LOGOUT_SUCCESS,
-                    PackagingVars.context.getUser().getFirstName() + " " + PackagingVars.context.getUser().getLastName()
-                    + " / " + PackagingVars.context.getUser().getLogin(), GlobalVars.APP_HOSTNAME,
-                    GlobalMethods.getStrTimeStamp() + " Project : "
-                    + PackagingVars.context.getUser().getHarnessType());
-            his_login.setMessage(str);
+                str = "";
+                his_login.create(his_login);
+            }
+            //Reset the state
+            state = new Mode2_S010_UserCodeScan();
 
-            str = "";
-            his_login.create(his_login);
+            this.clearContextSessionVals();
+
+            //Reset Image
+            PackagingVars.Packaging_Gui_Mode2.img_lbl.setIcon(state.getImg());
+            //Clear Scan Box
+            PackagingVars.Packaging_Gui_Mode2.requestedPallet_label.setText("");
+            //Enable Project Box
+            PackagingVars.Packaging_Gui_Mode2.HarnessTypeBoxSelectIndex(0);
+            PackagingVars.Packaging_Gui_Mode2.setHarnessTypeBoxState(true);
+            PackagingVars.Packaging_Gui_Mode2.setHarnessTypeFilterBoxState(true);
+            disableAdminMenus();
+            disableOperatorMenus();
+
+            connectedUserName_label.setText("");
+        } catch (NullPointerException ex) {
+            dispose();
+            dispose();
         }
-        //Reset the state
-        state = new Mode2_S010_UserCodeScan();
-
-        this.clearContextSessionVals();
-
-        //Reset Image
-        PackagingVars.Packaging_Gui_Mode2.img_lbl.setIcon(state.getImg());
-        //Clear Scan Box
-        PackagingVars.Packaging_Gui_Mode2.requestedPallet_label.setText("");
-        //Enable Project Box
-        PackagingVars.Packaging_Gui_Mode2.HarnessTypeBoxSelectIndex(0);
-        PackagingVars.Packaging_Gui_Mode2.setHarnessTypeBoxState(true);
-        PackagingVars.Packaging_Gui_Mode2.setHarnessTypeFilterBoxState(true);
-        disableAdminMenus();
-        disableOperatorMenus();
-
-        connectedUserName_label.setText("");
-
     }
-    
+
     public JTextArea getFeedbackTextarea() {
         return feedbackTextarea;
     }
@@ -790,9 +788,13 @@ public final class PACKAGING_UI0001_Main_Mode2 extends javax.swing.JFrame implem
     }
 
     private void menu010_pallet_detailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu010_pallet_detailsActionPerformed
-        if (PackagingVars.context.getUser().getAccessLevel() == GlobalVars.PROFIL_ADMIN) {
-            new PACKAGING_UI0010_PalletDetails(this, rootPaneCheckingEnabled, true, true, true, true).setVisible(true);
-        } else {
+        try {
+            if (PackagingVars.context.getUser().getAccessLevel() == GlobalVars.PROFIL_ADMIN) {
+                new PACKAGING_UI0010_PalletDetails(this, rootPaneCheckingEnabled, true, true, true, true).setVisible(true);
+            } else {
+                new PACKAGING_UI0010_PalletDetails(this, rootPaneCheckingEnabled, false, false, false, false).setVisible(true);
+            }
+        } catch (NullPointerException ex) {
             new PACKAGING_UI0010_PalletDetails(this, rootPaneCheckingEnabled, false, false, false, false).setVisible(true);
         }
 
@@ -836,7 +838,7 @@ public final class PACKAGING_UI0001_Main_Mode2 extends javax.swing.JFrame implem
     }
     private void menu012_harness_detailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu012_harness_detailsActionPerformed
         PACKAGING_UI0012_HarnessDetails harnessDetails;
-        if (PackagingVars.context.getUser()!= null && PackagingVars.context.getUser().getAccessLevel() == GlobalVars.PROFIL_ADMIN) {
+        if (PackagingVars.context.getUser() != null && PackagingVars.context.getUser().getAccessLevel() == GlobalVars.PROFIL_ADMIN) {
             harnessDetails = new PACKAGING_UI0012_HarnessDetails(this, rootPaneCheckingEnabled, true);
         } else {
             harnessDetails = new PACKAGING_UI0012_HarnessDetails(this, rootPaneCheckingEnabled, false);
@@ -1009,26 +1011,29 @@ public final class PACKAGING_UI0001_Main_Mode2 extends javax.swing.JFrame implem
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println("e.getKeyCode()"+e.getKeyCode());
-        System.out.println("keyTyped.VK_HOME"+KeyEvent.VK_HOME);
-        if(e.getKeyCode()== KeyEvent.VK_HOME)
+        System.out.println("e.getKeyCode()" + e.getKeyCode());
+        System.out.println("keyTyped.VK_HOME" + KeyEvent.VK_HOME);
+        if (e.getKeyCode() == KeyEvent.VK_HOME) {
             scan_txtbox.requestFocus();
+        }
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println("e.getKeyCode()"+e.getKeyCode());
-        System.out.println("keyPressed.VK_HOME"+KeyEvent.VK_HOME);
-        if(e.getKeyCode()== KeyEvent.VK_HOME)
+        System.out.println("e.getKeyCode()" + e.getKeyCode());
+        System.out.println("keyPressed.VK_HOME" + KeyEvent.VK_HOME);
+        if (e.getKeyCode() == KeyEvent.VK_HOME) {
             scan_txtbox.requestFocus();
+        }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        System.out.println("e.getKeyCode()"+e.getKeyCode());
-        System.out.println("keyReleased.VK_HOME"+KeyEvent.VK_HOME);
-        if(e.getKeyCode()== KeyEvent.VK_HOME)
+        System.out.println("e.getKeyCode()" + e.getKeyCode());
+        System.out.println("keyReleased.VK_HOME" + KeyEvent.VK_HOME);
+        if (e.getKeyCode() == KeyEvent.VK_HOME) {
             scan_txtbox.requestFocus();
-        
+        }
+
     }
 }
